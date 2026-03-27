@@ -1,3 +1,5 @@
+import { LanguageProvider } from './context/LanguageContext';
+import LanguageToggle from './components/LanguageToggle';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
@@ -7,14 +9,17 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Hero />
-      <About />
-      <Services />
-      <WhyUs />
-      <Contact />
-      <Footer />
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen">
+        <LanguageToggle />
+        <Hero />
+        <About />
+        <Services />
+        <WhyUs />
+        <Contact />
+        <Footer />
+      </div>
+    </LanguageProvider>
   );
 }
 
