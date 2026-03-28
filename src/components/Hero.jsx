@@ -1,13 +1,19 @@
+import { useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import CowScene from './CowScene';
 
-export default function Hero() {
+// Expose the hero ref so StickyCTA can detect when it's scrolled past
+export default function Hero({ heroRef }) {
   const { t } = useLanguage();
   const h = t.hero;
   const phone = '6303894012';
   const whatsappMsg = encodeURIComponent('Hello! I would like to order milk from Patthireddy Dairy Farm.');
 
   return (
-    <section className="bg-neo px-4 py-12 md:py-24 brutal-border border-b-0 relative overflow-hidden">
+    <section
+      ref={heroRef}
+      className="bg-neo px-4 pt-12 pb-0 md:pt-20 brutal-border border-b-0 relative overflow-hidden"
+    >
       {/* Background dot pattern */}
       <div
         className="absolute inset-0 opacity-10 pointer-events-none"
@@ -17,28 +23,13 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <div className="relative z-10 max-w-4xl mx-auto text-center pb-8 md:pb-12">
         {/* Badge */}
         <div className="inline-block bg-cream brutal-border brutal-shadow-sm px-4 py-1.5 mb-8 text-sm font-bold uppercase tracking-widest">
           {h.badge}
         </div>
 
-        {/* Cow row — capped at 5 on mobile, 10 on desktop */}
-        <div className="mb-8 md:mb-10">
-          <div className="flex justify-center gap-1 md:gap-2 text-3xl md:text-4xl">
-            {Array.from({ length: 10 }).map((_, i) => (
-              <span
-                key={i}
-                className={`animate-bounce ${i >= 5 ? 'hidden md:inline' : ''}`}
-                style={{ animationDelay: `${i * 0.1}s`, animationDuration: '2s' }}
-              >
-                🐄
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Heading — leading-snug gives proper Telugu glyph breathing room */}
+        {/* Heading */}
         <h1 className="text-5xl md:text-7xl font-black leading-snug mb-6 text-black">
           {h.heading1}
           <br />
@@ -54,7 +45,7 @@ export default function Hero() {
           {h.body}
         </p>
 
-        {/* CTA Buttons — full width on mobile */}
+        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center px-2">
           <a
             href={`https://wa.me/91${phone}?text=${whatsappMsg}`}
@@ -65,13 +56,16 @@ export default function Hero() {
             <span>💬</span> {h.btnWhatsapp}
           </a>
           <a
-            href={`tel:${phone}`}
+            href={`tel:+91${phone}`}
             className="brutal-btn bg-cream text-black px-6 py-4 text-base md:text-lg rounded-none inline-flex items-center gap-2 justify-center w-full sm:w-auto"
           >
-            <span>📞</span> {h.btnCall}: {phone}
+            <span>📞</span> {h.btnCall}: +91 {phone}
           </a>
         </div>
       </div>
+
+      {/* Cow grazing scene sits flush at the bottom of the hero */}
+      <CowScene />
     </section>
   );
 }

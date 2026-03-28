@@ -1,13 +1,17 @@
 import { useLanguage } from '../context/LanguageContext';
+import { useInView } from '../hooks/useInView';
 
 export default function WhyUs() {
   const { t } = useLanguage();
   const w = t.whyus;
+  const [ref, inView] = useInView();
 
   return (
-    <section className="bg-cream brutal-border border-b-0 px-4 py-16">
+    <section
+      ref={ref}
+      className={`bg-cream brutal-border border-b-0 px-4 py-16 fade-section ${inView ? 'in-view' : ''}`}
+    >
       <div className="max-w-5xl mx-auto">
-        {/* Header */}
         <div className="mb-12 text-center">
           <span className="inline-block bg-neo brutal-border brutal-shadow-sm px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4">
             {w.badge}
@@ -18,10 +22,10 @@ export default function WhyUs() {
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-          {w.items.map((r) => (
+          {w.items.map((r, i) => (
             <div
               key={r.title}
-              className="brutal-border brutal-shadow bg-white p-6 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#000] transition-all duration-150"
+              className={`brutal-border brutal-shadow bg-white p-6 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#000] transition-all duration-150 stagger-card stagger-${i + 1}`}
             >
               <div className="text-4xl mb-3">{r.icon}</div>
               <h3 className="text-lg font-black mb-2">{r.title}</h3>

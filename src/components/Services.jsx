@@ -1,13 +1,17 @@
 import { useLanguage } from '../context/LanguageContext';
+import { useInView } from '../hooks/useInView';
 
 export default function Services() {
   const { t } = useLanguage();
   const s = t.services;
+  const [ref, inView] = useInView();
 
   return (
-    <section className="bg-cream-dark brutal-border border-b-0 px-4 py-16">
+    <section
+      ref={ref}
+      className={`bg-cream-dark brutal-border border-b-0 px-4 py-16 fade-section ${inView ? 'in-view' : ''}`}
+    >
       <div className="max-w-5xl mx-auto">
-        {/* Header */}
         <div className="mb-12 text-center">
           <span className="inline-block bg-black text-cream brutal-border brutal-shadow-sm px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4">
             {s.badge}
@@ -16,10 +20,10 @@ export default function Services() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {s.items.map((service) => (
+          {s.items.map((service, i) => (
             <div
               key={service.title}
-              className={`brutal-border brutal-shadow ${service.bg} p-8 flex flex-col`}
+              className={`brutal-border brutal-shadow ${service.bg} p-8 flex flex-col stagger-card stagger-${i + 1}`}
             >
               <div className="text-5xl mb-4">{service.icon}</div>
               <h3 className="text-2xl font-black mb-3">{service.title}</h3>
