@@ -6,7 +6,7 @@ const DESKTOP_COUNT = 8;
 const MOBILE_COUNT = 4;
 
 // Alternate sizes slightly for a natural depth feel
-const SIZES    = ['2.4rem', '2.0rem', '2.6rem', '1.9rem', '2.3rem', '2.1rem', '2.5rem', '2.0rem'];
+const SIZES    = ['2.2rem', '2.2rem', '2.2rem', '2.2rem', '2.2rem', '2.2rem', '2.2rem', '2.2rem'];
 const BOTTOMS  = ['28px',   '30px',   '27px',   '29px',   '28px',   '30px',   '27px',   '29px'];
 // Bob speed varies slightly so they don't all bounce in sync
 const BOB_DUR  = ['0.52s',  '0.58s',  '0.50s',  '0.55s',  '0.53s',  '0.57s',  '0.51s',  '0.56s'];
@@ -65,14 +65,17 @@ export default function CowScene() {
             lineHeight:     1,
           }}
         >
-          {/* Inner span: vertical bob only — no scaleX here */}
-          <span
-            style={{
-              display:        'inline-block',
-              animation:      `walkBob ${cow.bobDur} ease-in-out infinite`,
-            }}
-          >
-            🐄
+          {/* Middle span: static flip — scaleX(-1) so cow faces left (direction of travel) */}
+          <span style={{ display: 'inline-block', transform: 'scaleX(-1)' }}>
+            {/* Inner span: vertical bob only */}
+            <span
+              style={{
+                display:   'inline-block',
+                animation: `walkBob ${cow.bobDur} ease-in-out infinite`,
+              }}
+            >
+              🐄
+            </span>
           </span>
         </span>
       ))}
