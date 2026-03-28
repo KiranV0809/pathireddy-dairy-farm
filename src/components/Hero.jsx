@@ -13,10 +13,8 @@ export default function Hero({ heroRef }) {
   return (
     <section
       ref={heroRef}
-      className="bg-neo px-4 pt-12 pb-0 md:pt-20 brutal-border border-b-0 relative overflow-hidden"
+      className="bg-neo px-4 pt-0 pb-0 brutal-border border-b-0 relative overflow-hidden"
     >
-      <LanguageToggle />
-
       {/* Background dot pattern */}
       <div
         className="absolute inset-0 opacity-10 pointer-events-none"
@@ -26,7 +24,12 @@ export default function Hero({ heroRef }) {
         }}
       />
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center pb-8 md:pb-12">
+      {/* Top bar: language toggle right-aligned, in normal document flow */}
+      <div className="relative z-10 flex justify-end pt-3 pb-0 px-0">
+        <LanguageToggle />
+      </div>
+
+      <div className="relative z-10 max-w-4xl mx-auto text-center pt-6 pb-8 md:pt-10 md:pb-12">
         {/* Badge */}
         <div className="inline-block bg-cream brutal-border brutal-shadow-sm px-4 py-1.5 mb-8 text-sm font-bold uppercase tracking-widest">
           {h.badge}
