@@ -57,10 +57,21 @@
 /*    Inline styles are invisible to the scanner, so we define them    */
 /*    as plain CSS here instead.                                        */
 
+@keyframes truckBounce {
+  0%, 100% { transform: translateY(0px) rotate(-0.4deg); }
+  50%      { transform: translateY(-4px) rotate(0.4deg); }
+}
+.truck-icon {
+  animation: truckBounce 0.75s ease-in-out infinite;
+  transform-origin: center bottom;
+  display: block;
+}
+
 @keyframes walkAcross {
-  /* Right → Left. scaleX(-1) flips the cow so it faces the direction it walks. */
-  0%   { transform: translateX(110vw) scaleX(-1); }
-  100% { transform: translateX(-120px) scaleX(-1); }
+  /* Pure translateX — scaleX(-1) flip is handled by a separate static wrapper */
+  /* so the coordinate system stays predictable.                                */
+  0%   { transform: translateX(110vw); }
+  100% { transform: translateX(-120px); }
 }
 
 @keyframes walkBob {

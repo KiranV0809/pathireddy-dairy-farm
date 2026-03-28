@@ -84,7 +84,7 @@ const translations = {
           body: 'Pure milk, nothing added. We take pride in honest farming and will never compromise on the quality we deliver to your family.',
         },
         {
-          icon: '📦',
+          icon: '__truck__',
           title: 'Reliable Supply',
           body: 'Rain or shine, festival or weekday — we never miss a delivery. Your daily milk supply is our daily commitment.',
         },
@@ -213,7 +213,7 @@ const translations = {
           body: 'స్వచ్ఛమైన పాలు, ఏమీ కలపలేదు. నిజాయితీగా వ్యవసాయం చేయడం మా గర్వం — మీ కుటుంబానికి నాణ్యత విషయంలో రాజీ పడం.',
         },
         {
-          icon: '📦',
+          icon: '__truck__',
           title: 'నమ్మదగిన సరఫరా',
           body: 'వర్షం అయినా, ఎండ అయినా, పండుగ అయినా — డెలివరీ మిస్ అవ్వం. మీ రోజువారీ పాల సరఫరా మా రోజువారీ బాధ్యత.',
         },
