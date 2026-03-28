@@ -40,7 +40,6 @@
     box-shadow: 4px 4px 0px 0px #000;
     transition: box-shadow 0.1s ease, transform 0.1s ease;
     cursor: pointer;
-    font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
   }
   .brutal-btn:hover {
@@ -51,4 +50,33 @@
     box-shadow: 0px 0px 0px 0px #000;
     transform: translate(4px, 4px);
   }
+}
+
+/* ── Telugu language mode ─────────────────────────────────────────── */
+.lang-te {
+  font-family: 'Noto Sans Telugu', sans-serif;
+}
+
+.lang-te h1,
+.lang-te h2,
+.lang-te h3,
+.lang-te h4 {
+  font-family: 'Baloo Tammudu 2', 'Noto Sans Telugu', sans-serif;
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+
+/* Telugu script needs more breathing room at small sizes */
+.lang-te p,
+.lang-te span,
+.lang-te a,
+.lang-te button {
+  font-family: 'Noto Sans Telugu', sans-serif;
+  line-height: 1.85;
+}
+
+.lang-te .brutal-btn {
+  font-family: 'Noto Sans Telugu', sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
 }
