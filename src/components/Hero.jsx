@@ -3,8 +3,8 @@ import { useLanguage } from '../context/LanguageContext';
 export default function Hero() {
   const { t } = useLanguage();
   const h = t.hero;
-  const phone = '8096459872';
-  const whatsappMsg = encodeURIComponent('Hello! I would like to order milk from Pathireddy Dairy Farm.');
+  const phone = '6303894012';
+  const whatsappMsg = encodeURIComponent('Hello! I would like to order milk from Patthireddy Dairy Farm.');
 
   return (
     <section className="bg-neo px-4 py-12 md:py-24 brutal-border border-b-0 relative overflow-hidden">

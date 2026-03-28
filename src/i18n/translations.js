@@ -3,7 +3,7 @@ const translations = {
     // Hero
     hero: {
       badge: 'Est. in Our Village — 100% Natural',
-      heading1: 'Pathireddy',
+      heading1: 'Patthireddy',
       heading2: 'Dairy Farm',
       subheading: 'Fresh, Pure Milk — Straight from Our Family Farm to Your Home',
       body: 'A small village family with 10 happy cows and a big heart. We supply fresh milk daily and handle bulk orders for your special events.',
@@ -15,7 +15,7 @@ const translations = {
     about: {
       badge: 'Our Story',
       heading: 'A Family That Believes in Real, Fresh Milk',
-      p1: 'We are the Pathireddy family — a small dairy farming family from our village. What started as caring for a few cows grew into a mission: bringing the purest, freshest milk to every home around us.',
+      p1: 'We are the Patthireddy family — a small dairy farming family from our village. What started as caring for a few cows grew into a mission: bringing the purest, freshest milk to every home around us.',
       p2: 'Our 10 cows are raised with love, fed on natural grass, and milked fresh every morning. No preservatives, no additives — just milk the way it was always meant to be.',
       p3: 'From daily doorstep deliveries to supplying bulk milk for weddings, festivals, and major events — we are your trusted village dairy.',
       farmLabel: 'Our Village Farm',
@@ -60,7 +60,7 @@ const translations = {
     // Why Us
     whyus: {
       badge: 'Why Families Choose Us',
-      heading: 'The Pathireddy',
+      heading: 'The Patthireddy',
       headingHighlight: 'Promise',
       items: [
         {
@@ -102,7 +102,7 @@ const translations = {
       heading: 'Ready to Order\nFresh Milk?',
       subheading: 'Call us, WhatsApp us, or just walk over — we are always here.',
       detailsTitle: 'Contact Details',
-      farmName: 'Pathireddy Dairy Farm',
+      farmName: 'Patthireddy Dairy Farm',
       labels: {
         name: 'Farm Name',
         phone: 'Phone / WhatsApp',
@@ -115,7 +115,11 @@ const translations = {
       orderBody: 'The fastest way to order your daily milk or book for an event — just send us a message on WhatsApp and we will confirm within minutes.',
       btnWhatsapp: 'WhatsApp Order',
       btnCall: 'Call',
-      shareNote: '🌟 Know someone who needs fresh milk? Share this page with them on WhatsApp!',
+      shareNote: '🌟 Know someone who needs fresh milk?',
+      shareBtn: 'Share this page',
+      shareTitle: 'Patthireddy Dairy Farm — Fresh Milk',
+      shareText: 'Fresh, pure milk from Patthireddy Dairy Farm. Order via WhatsApp or call +91 6303894012.',
+      shareCopied: 'Link copied!',
     },
 
     // Footer
@@ -128,7 +132,7 @@ const translations = {
     // Hero
     hero: {
       badge: 'మా గ్రామంలో స్థాపించబడింది — 100% సహజమైన',
-      heading1: 'పతిరెడ్డి',
+      heading1: 'పత్తిరెడ్డి',
       heading2: 'డైరీ ఫారం',
       subheading: 'తాజా, స్వచ్ఛమైన పాలు — మా కుటుంబ పొలం నుండి నేరుగా మీ ఇంటికి',
       body: 'పది సంతోషకరమైన ఆవులు మరియు పెద్ద మనసు ఉన్న చిన్న గ్రామ కుటుంబం. మేము ప్రతి రోజూ తాజా పాలు అందిస్తాం మరియు మీ ప్రత్యేక సందర్భాలకు పెద్ద మొత్తంలో పాల సరఫరా చేస్తాం.',
@@ -140,7 +144,7 @@ const translations = {
     about: {
       badge: 'మా కథ',
       heading: 'నిజమైన, తాజా పాలపై నమ్మకం ఉన్న కుటుంబం',
-      p1: 'మేము పతిరెడ్డి కుటుంబం — మా గ్రామంలో పాడి వ్యాపారం చేసే చిన్న కుటుంబం. కొన్ని ఆవులను పెంచడంతో మొదలైన ఈ ప్రయాణం, చుట్టుపక్కల ప్రతి ఇంటికి స్వచ్ఛమైన పాలు అందించే లక్ష్యంగా మారింది.',
+      p1: 'మేము పత్తిరెడ్డి కుటుంబం — మా గ్రామంలో పాడి వ్యాపారం చేసే చిన్న కుటుంబం. కొన్ని ఆవులను పెంచడంతో మొదలైన ఈ ప్రయాణం, చుట్టుపక్కల ప్రతి ఇంటికి స్వచ్ఛమైన పాలు అందించే లక్ష్యంగా మారింది.',
       p2: 'మా 10 ఆవులు బహిరంగ మైదానాల్లో సహజ గడ్డి తింటాయి — ఎటువంటి హార్మోన్లు లేదా కృత్రిమ ఆహారం లేదు. ఆరోగ్యకరమైన ఆవులు అంటే మంచి, స్వచ్ఛమైన పాలు.',
       p3: 'రోజువారీ ఇంటి దగ్గర డెలివరీ నుండి పెళ్ళిళ్ళు, పండుగలు మరియు పెద్ద కార్యక్రమాలకు పాల సరఫరా వరకు — మేము మీ నమ్మకమైన గ్రామ పాడి ఫారం.',
       farmLabel: 'మా గ్రామ పొలం',
@@ -185,7 +189,7 @@ const translations = {
     // Why Us
     whyus: {
       badge: 'కుటుంబాలు మమ్మల్ని ఎందుకు ఎంచుకుంటాయి',
-      heading: 'పతిరెడ్డి',
+      heading: 'పత్తిరెడ్డి',
       headingHighlight: 'వాగ్దానం',
       items: [
         {
@@ -227,7 +231,7 @@ const translations = {
       heading: 'తాజా పాలు ఆర్డర్ చేయడానికి\nసిద్ధంగా ఉన్నారా?',
       subheading: 'కాల్ చేయండి, వాట్సాప్ చేయండి, లేదా నేరుగా రండి — మేము ఎల్లప్పుడూ ఇక్కడ ఉన్నాం.',
       detailsTitle: 'సంప్రదింపు వివరాలు',
-      farmName: 'పతిరెడ్డి డైరీ ఫారం',
+      farmName: 'పత్తిరెడ్డి డైరీ ఫారం',
       labels: {
         name: 'ఫారం పేరు',
         phone: 'ఫోన్ / వాట్సాప్',
@@ -240,7 +244,11 @@ const translations = {
       orderBody: 'మీ రోజువారీ పాలు లేదా ఈవెంట్ బుక్ చేయడానికి వేగవంతమైన మార్గం — వాట్సాప్‌లో మెసేజ్ పంపండి, మేము నిమిషాల్లో నిర్ధారిస్తాం.',
       btnWhatsapp: 'వాట్సాప్ ఆర్డర్',
       btnCall: 'కాల్ చేయండి',
-      shareNote: '🌟 తాజా పాలు కావలసిన వారికి తెలుసా? ఈ పేజీని వాట్సాప్‌లో షేర్ చేయండి!',
+      shareNote: '🌟 తాజా పాలు కావలసిన వారికి తెలుసా?',
+      shareBtn: 'ఈ పేజీని షేర్ చేయండి',
+      shareTitle: 'పత్తిరెడ్డి డైరీ ఫారం — తాజా పాలు',
+      shareText: 'పత్తిరెడ్డి డైరీ ఫారం నుండి తాజా, స్వచ్ఛమైన పాలు. వాట్సాప్‌లో ఆర్డర్ చేయండి లేదా +91 6303894012 కి కాల్ చేయండి.',
+      shareCopied: 'లింక్ కాపీ అయింది!',
     },
 
     // Footer
