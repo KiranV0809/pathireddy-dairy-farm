@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import CowScene from './CowScene';
+import LanguageToggle from './LanguageToggle';
 
 // Expose the hero ref so StickyCTA can detect when it's scrolled past
 export default function Hero({ heroRef }) {
@@ -14,6 +15,8 @@ export default function Hero({ heroRef }) {
       ref={heroRef}
       className="bg-neo px-4 pt-12 pb-0 md:pt-20 brutal-border border-b-0 relative overflow-hidden"
     >
+      <LanguageToggle />
+
       {/* Background dot pattern */}
       <div
         className="absolute inset-0 opacity-10 pointer-events-none"

@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
-import LanguageToggle from './components/LanguageToggle';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
@@ -15,7 +14,6 @@ function AppInner() {
 
   return (
     <div className={`min-h-screen lang-${lang}`}>
-      <LanguageToggle />
       <Hero heroRef={heroRef} />
       <About />
       <Services />
