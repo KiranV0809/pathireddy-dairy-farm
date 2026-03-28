@@ -52,35 +52,66 @@
   }
 }
 
-/* ── Scroll-triggered fade-in ────────────────────────────────────── */
+/* ── Keyframes (defined here so they are always in the CSS output) ── */
+/*    Tailwind only emits @keyframes it finds via class-name scanning. */
+/*    Inline styles are invisible to the scanner, so we define them    */
+/*    as plain CSS here instead.                                        */
+
+@keyframes walkAcross {
+  0%   { transform: translateX(-80px); }
+  100% { transform: translateX(110vw); }
+}
+
+@keyframes walkBob {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-7px); }
+}
+
+@keyframes cloudDrift {
+  0%   { transform: translateX(110vw); }
+  100% { transform: translateX(-220px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+/* ── Sticky CTA slide-up (used via Tailwind animate-slide-up) ───────── */
+.animate-slide-up {
+  animation: slideUp 0.35s ease-out forwards;
+}
+
+/* ── Scroll-triggered fade-in ────────────────────────────────────────── */
+/*    Uses CSS animation (not transition) so it fires reliably even when  */
+/*    React 18 batches the class-add before the first browser paint.      */
 .fade-section {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.55s ease-out, transform 0.55s ease-out;
 }
 .fade-section.in-view {
-  opacity: 1;
-  transform: translateY(0);
+  animation: fadeInUp 0.55s ease-out forwards;
 }
-/* Stagger for child cards */
-.fade-section.in-view .stagger-1 { transition-delay: 0.08s; }
-.fade-section.in-view .stagger-2 { transition-delay: 0.16s; }
-.fade-section.in-view .stagger-3 { transition-delay: 0.24s; }
-.fade-section.in-view .stagger-4 { transition-delay: 0.32s; }
-.fade-section.in-view .stagger-5 { transition-delay: 0.40s; }
-.fade-section.in-view .stagger-6 { transition-delay: 0.48s; }
 
+/* Individual cards stagger inside an in-view section */
 .stagger-card {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.45s ease-out, transform 0.45s ease-out;
 }
 .in-view .stagger-card {
-  opacity: 1;
-  transform: translateY(0);
+  animation: fadeInUp 0.45s ease-out both;
 }
+.in-view .stagger-1 { animation-delay: 0.05s; }
+.in-view .stagger-2 { animation-delay: 0.13s; }
+.in-view .stagger-3 { animation-delay: 0.21s; }
+.in-view .stagger-4 { animation-delay: 0.29s; }
+.in-view .stagger-5 { animation-delay: 0.37s; }
+.in-view .stagger-6 { animation-delay: 0.45s; }
 
-/* ── Telugu language mode ─────────────────────────────────────────── */
+/* ── Telugu language mode ─────────────────────────────────────────────── */
 .lang-te {
   font-family: 'Noto Sans Telugu', sans-serif;
 }
@@ -94,7 +125,6 @@
   letter-spacing: 0;
 }
 
-/* Telugu script needs more breathing room at small sizes */
 .lang-te p,
 .lang-te span,
 .lang-te a,
