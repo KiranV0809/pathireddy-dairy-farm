@@ -58,8 +58,9 @@
 /*    as plain CSS here instead.                                        */
 
 @keyframes walkAcross {
-  0%   { transform: translateX(-80px); }
-  100% { transform: translateX(110vw); }
+  /* Right → Left. scaleX(-1) flips the cow so it faces the direction it walks. */
+  0%   { transform: translateX(110vw) scaleX(-1); }
+  100% { transform: translateX(-120px) scaleX(-1); }
 }
 
 @keyframes walkBob {
