@@ -115,9 +115,9 @@ export default function Contact() {
               </a>
               <a
                 href={`tel:+91${phone}`}
-                className="brutal-btn bg-cream text-black px-6 py-4 text-base inline-flex items-center justify-center gap-2"
+                className="brutal-btn bg-cream text-black px-6 py-4 text-base inline-flex items-center justify-center gap-2 whitespace-nowrap"
               >
-                <span>📞</span> {c.btnCall}: +91 {phone}
+                <span>📞</span> +91 {phone}
               </a>
             </div>
           </div>

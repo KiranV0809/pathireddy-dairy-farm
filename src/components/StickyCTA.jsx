@@ -33,14 +33,14 @@ export default function StickyCTA({ heroRef }) {
           href={`https://wa.me/91${phone}?text=${whatsappMsg}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="brutal-btn bg-[#25D366] text-black px-4 py-3 text-sm flex-1 inline-flex items-center justify-center gap-2"
+          className="brutal-btn bg-[#25D366] text-black px-4 py-3 text-sm flex-1 inline-flex items-center justify-center gap-2 whitespace-nowrap"
         >
           <span>💬</span>
-          <span className="font-black">{t.hero.btnWhatsapp}</span>
+          <span className="font-black">{t.contact.btnWhatsapp}</span>
         </a>
         <a
           href={`tel:+91${phone}`}
-          className="brutal-btn bg-cream text-black px-4 py-3 text-sm flex-1 inline-flex items-center justify-center gap-2"
+          className="brutal-btn bg-cream text-black px-4 py-3 text-sm flex-1 inline-flex items-center justify-center gap-2 whitespace-nowrap"
         >
           <span>📞</span>
           <span className="font-black">+91 {phone}</span>
