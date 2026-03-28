@@ -58,24 +58,21 @@ export default function CowScene() {
             position:       'absolute',
             bottom:         cow.bottom,
             fontSize:       cow.size,
-            // Outer span: horizontal walk (includes scaleX(-1) flip via keyframe)
+            // Outer span: horizontal walk (right → left)
             animation:      `walkAcross ${DURATION}s linear infinite`,
             animationDelay: cow.delay,
             willChange:     'transform',
             lineHeight:     1,
           }}
         >
-          {/* Middle span: static flip — scaleX(-1) so cow faces left (direction of travel) */}
-          <span style={{ display: 'inline-block', transform: 'scaleX(-1)' }}>
-            {/* Inner span: vertical bob only */}
-            <span
-              style={{
-                display:   'inline-block',
-                animation: `walkBob ${cow.bobDur} ease-in-out infinite`,
-              }}
-            >
-              🐄
-            </span>
+          {/* Inner span: vertical bob only — 🐄 already faces left by default on Apple */}
+          <span
+            style={{
+              display:   'inline-block',
+              animation: `walkBob ${cow.bobDur} ease-in-out infinite`,
+            }}
+          >
+            🐄
           </span>
         </span>
       ))}

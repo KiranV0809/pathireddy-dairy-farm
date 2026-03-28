@@ -89,7 +89,7 @@ export default function Contact() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="text-2xl">📦</span>
+                <span className="text-2xl">🎉</span>
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wide text-black/50 mb-1">{c.labels.event}</p>
                   <p className="text-xl font-black">{c.labels.eventValue}</p>
