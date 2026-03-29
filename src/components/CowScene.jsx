@@ -7,7 +7,7 @@ const MOBILE_COUNT = 4;
 
 // Alternate sizes slightly for a natural depth feel
 const SIZES    = ['2.2rem', '2.2rem', '2.2rem', '2.2rem', '2.2rem', '2.2rem', '2.2rem', '2.2rem'];
-const BOTTOMS  = ['28px',   '30px',   '27px',   '29px',   '28px',   '30px',   '27px',   '29px'];
+const BOTTOMS  = ['8px',    '10px',   '7px',    '9px',    '8px',    '10px',   '7px',    '9px'];
 // Bob speed varies slightly so they don't all bounce in sync
 const BOB_DUR  = ['0.52s',  '0.58s',  '0.50s',  '0.55s',  '0.53s',  '0.57s',  '0.51s',  '0.56s'];
 
