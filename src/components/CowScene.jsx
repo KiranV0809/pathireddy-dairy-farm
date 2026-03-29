@@ -7,7 +7,7 @@ const MOBILE_COUNT = 4;
 
 // Alternate sizes slightly for a natural depth feel
 const SIZES    = ['2.2rem', '2.2rem', '2.2rem', '2.2rem', '2.2rem', '2.2rem', '2.2rem', '2.2rem'];
-const BOTTOMS  = ['8px',    '10px',   '7px',    '9px',    '8px',    '10px',   '7px',    '9px'];
+const BOTTOMS  = ['21px',   '23px',   '20px',   '22px',   '21px',   '23px',   '20px',   '22px'];
 // Bob speed varies slightly so they don't all bounce in sync
 const BOB_DUR  = ['0.52s',  '0.58s',  '0.50s',  '0.55s',  '0.53s',  '0.57s',  '0.51s',  '0.56s'];
 
@@ -63,13 +63,17 @@ export default function CowScene() {
             animationDelay: cow.delay,
             willChange:     'transform',
             lineHeight:     1,
+            // Force emoji font metrics so Noto Sans Telugu baseline shift doesn't affect position
+            fontFamily:     '"Apple Color Emoji","Segoe UI Emoji","Noto Emoji",sans-serif',
           }}
         >
           {/* Inner span: vertical bob only — 🐄 already faces left by default on Apple */}
           <span
             style={{
-              display:   'inline-block',
-              animation: `walkBob ${cow.bobDur} ease-in-out infinite`,
+              display:    'inline-block',
+              lineHeight: 1,
+              fontFamily: '"Apple Color Emoji","Segoe UI Emoji","Noto Emoji",sans-serif',
+              animation:  `walkBob ${cow.bobDur} ease-in-out infinite`,
             }}
           >
             🐄
