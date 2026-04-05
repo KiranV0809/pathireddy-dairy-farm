@@ -84,7 +84,7 @@ export default function CowScene() {
       {/* Grass strip */}
       <div
         className="absolute bottom-0 w-full"
-        style={{ height: '26px', backgroundColor: '#22c55e', borderTop: '3px solid #000' }}
+        style={{ height: '26px', backgroundColor: '#22c55e', borderTop: '2px solid rgba(0,60,0,0.35)' }}
       />
     </div>
   );

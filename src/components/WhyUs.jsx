@@ -14,11 +14,11 @@ export default function WhyUs() {
     >
       <div className="max-w-5xl mx-auto">
         <div className="mb-12 text-center">
-          <span className="inline-block bg-neo brutal-border brutal-shadow-sm px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4">
+          <span className="inline-block bg-neo brutal-border brutal-shadow-sm rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-widest mb-4 text-neo-dark">
             {w.badge}
           </span>
-          <h2 className="text-4xl md:text-5xl font-black">
-            {w.heading} <span className="bg-neo px-1">{w.headingHighlight}</span>
+          <h2 className="text-3xl md:text-5xl font-black">
+            {w.heading} <span className="bg-neo rounded px-2">{w.headingHighlight}</span>
           </h2>
         </div>
 
@@ -26,7 +26,7 @@ export default function WhyUs() {
           {w.items.map((r, i) => (
             <div
               key={r.title}
-              className={`brutal-border brutal-shadow bg-white p-6 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_#000] transition-all duration-150 stagger-card stagger-${i + 1}`}
+              className={`brutal-border brutal-shadow bg-white rounded-2xl p-6 hover:translate-y-[-3px] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-150 stagger-card stagger-${i + 1}`}
             >
               <div className="text-4xl mb-3">
                 {r.icon === '__truck__' ? <MilkTruck /> : r.icon}

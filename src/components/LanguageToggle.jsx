@@ -7,22 +7,21 @@ export default function LanguageToggle() {
   const isTe = lang === 'te';
 
   return (
-    <div className="brutal-border flex overflow-hidden bg-black">
+    <div className="flex items-center gap-1 bg-white/80 backdrop-blur-sm brutal-border brutal-shadow-sm rounded-full px-1 py-1">
       <button
         onClick={() => !isTe && toggle()}
-        className={`px-3 py-1.5 text-sm font-black transition-colors duration-150 ${
-          isTe ? 'bg-cream text-black' : 'bg-black text-cream/50'
+        className={`px-3 py-1 text-sm font-bold rounded-full transition-all duration-150 ${
+          isTe ? 'bg-[#1A1A1A] text-white' : 'text-[#888]'
         }`}
         aria-pressed={isTe}
         title="తెలుగులో చదవండి"
       >
         తె
       </button>
-      <div style={{ width: '2px', background: '#555' }} />
       <button
         onClick={() => isTe && toggle()}
-        className={`px-3 py-1.5 text-sm font-black transition-colors duration-150 ${
-          !isTe ? 'bg-cream text-black' : 'bg-black text-cream/50'
+        className={`px-3 py-1 text-sm font-bold rounded-full transition-all duration-150 ${
+          !isTe ? 'bg-[#1A1A1A] text-white' : 'text-[#888]'
         }`}
         aria-pressed={!isTe}
         title="Read in English"

@@ -10,9 +10,9 @@
   }
 
   body {
-    background-color: #FFFBEB;
+    background-color: #F5F3EE;
     font-family: 'Inter', sans-serif;
-    color: #000000;
+    color: #1A1A1A;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -24,32 +24,180 @@
 
 @layer utilities {
   .brutal-border {
-    border: 3px solid #000000;
+    border: 1px solid rgba(0,0,0,0.12);
   }
   .brutal-shadow {
-    box-shadow: 4px 4px 0px 0px #000000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
   }
   .brutal-shadow-lg {
-    box-shadow: 6px 6px 0px 0px #000000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
   }
   .brutal-shadow-sm {
-    box-shadow: 2px 2px 0px 0px #000000;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
   }
   .brutal-btn {
-    border: 3px solid #000;
-    box-shadow: 4px 4px 0px 0px #000;
-    transition: box-shadow 0.1s ease, transform 0.1s ease;
+    border: 1.5px solid #1A1A1A;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
     cursor: pointer;
     font-weight: 700;
   }
   .brutal-btn:hover {
-    box-shadow: 2px 2px 0px 0px #000;
-    transform: translate(2px, 2px);
+    box-shadow: 0 5px 16px rgba(0,0,0,0.18);
+    transform: translateY(-2px);
   }
   .brutal-btn:active {
-    box-shadow: 0px 0px 0px 0px #000;
-    transform: translate(4px, 4px);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.10);
+    transform: translateY(0px);
   }
+}
+
+/* ── Premium Hero Animations ─────────────────────────────────────────── */
+
+@keyframes heroWordReveal {
+  from {
+    transform: translateY(48px) skewY(3deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) skewY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes heroFadeUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);   opacity: 1; }
+}
+
+@keyframes drawUnderline {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6); }
+  60%       { box-shadow: 0 0 0 7px rgba(255, 255, 255, 0); }
+}
+
+@keyframes shimmerSweep {
+  from { left: -80%; }
+  to   { left: 130%; }
+}
+
+.hero-word-1 {
+  opacity: 0;
+  animation: heroWordReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+.hero-word-2 {
+  opacity: 0;
+  animation: heroWordReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+}
+
+.hero-fade-sub {
+  opacity: 0;
+  animation: heroFadeUp 0.7s ease-out 0.6s forwards;
+}
+
+.hero-fade-body {
+  opacity: 0;
+  animation: heroFadeUp 0.7s ease-out 0.75s forwards;
+}
+
+.hero-badge-anim {
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease-out 0s forwards;
+}
+
+.hero-cta-anim {
+  opacity: 0;
+  animation: heroFadeUp 0.7s ease-out 0.9s forwards;
+}
+
+/* Animated underline on heading2 */
+.hero-underline {
+  position: relative;
+  display: inline-block;
+}
+.hero-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 2px;
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation: drawUnderline 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.75s forwards;
+}
+
+/* Pulsing dot for badge */
+.pulse-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  animation: pulseDot 1.8s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+/* Shimmer sweep on primary CTA */
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  border-radius: inherit;
+  pointer-events: none;
+}
+.shimmer-btn:hover::after {
+  animation: shimmerSweep 0.45s ease-in-out forwards;
+}
+
+/* Hero glass buttons */
+.hero-btn-primary {
+  background: white;
+  color: #0c3d6e;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.22);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.hero-btn-primary:hover {
+  box-shadow: 0 8px 36px rgba(0,0,0,0.32);
+  transform: translateY(-2px);
+}
+
+.hero-btn-ghost {
+  background: rgba(255,255,255,0.12);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255,255,255,0.40);
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: background 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+.hero-btn-ghost:hover {
+  background: rgba(255,255,255,0.22);
+  transform: translateY(-2px);
 }
 
 /* ── Keyframes (defined here so they are always in the CSS output) ── */

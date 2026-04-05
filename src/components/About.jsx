@@ -14,10 +14,10 @@ export default function About() {
       <div className="max-w-5xl mx-auto">
         {/* Section header */}
         <div className="mb-12 text-center">
-          <span className="inline-block bg-neo brutal-border brutal-shadow-sm px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4">
+          <span className="inline-block bg-neo brutal-border brutal-shadow-sm rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-widest mb-4 text-neo-dark">
             {a.badge}
           </span>
-          <h2 className="text-4xl md:text-5xl font-black leading-tight">
+          <h2 className="text-3xl md:text-5xl font-black leading-tight">
             {a.heading.split('Real,').length > 1 ? (
               <>A Family That <span className="bg-neo px-1">Believes in</span><br />Real, Fresh Milk</>
             ) : (
@@ -27,13 +27,13 @@ export default function About() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-          <div className="brutal-border brutal-shadow bg-white p-8 stagger-card stagger-1">
+          <div className="brutal-border brutal-shadow bg-white rounded-2xl p-5 md:p-8 stagger-card stagger-1">
             <p className="text-lg font-medium leading-relaxed mb-4">{a.p1}</p>
             <p className="text-lg font-medium leading-relaxed mb-4">{a.p2}</p>
             <p className="text-lg font-medium leading-relaxed">{a.p3}</p>
           </div>
-          <div className="brutal-border brutal-shadow bg-neo p-8 flex flex-col items-center justify-center min-h-64 text-center stagger-card stagger-2">
-            <div className="text-8xl mb-4">🌾</div>
+          <div className="brutal-border brutal-shadow bg-neo rounded-2xl p-5 md:p-8 flex flex-col items-center justify-center min-h-48 md:min-h-64 text-center stagger-card stagger-2">
+            <div className="text-6xl md:text-8xl mb-4">🌾</div>
             <p className="text-2xl font-black">{a.farmLabel}</p>
             <p className="text-base font-semibold mt-2 opacity-80">{a.farmSub}</p>
           </div>
@@ -44,11 +44,11 @@ export default function About() {
           {a.stats.map((stat, i) => (
             <div
               key={stat.label}
-              className={`brutal-border brutal-shadow bg-white p-6 text-center stagger-card stagger-${i + 3}`}
+              className={`brutal-border brutal-shadow bg-white rounded-2xl p-4 md:p-6 text-center stagger-card stagger-${i + 3}`}
             >
-              <div className="text-4xl mb-2">{stat.icon}</div>
-              <div className="text-3xl font-black text-neo-dark mb-1">{stat.value}</div>
-              <div className="text-sm font-bold uppercase tracking-wide">{stat.label}</div>
+              <div className="text-3xl md:text-4xl mb-2">{stat.icon}</div>
+              <div className="text-2xl md:text-3xl font-black text-neo-dark mb-1">{stat.value}</div>
+              <div className="text-xs md:text-sm font-bold uppercase tracking-wide">{stat.label}</div>
             </div>
           ))}
         </div>

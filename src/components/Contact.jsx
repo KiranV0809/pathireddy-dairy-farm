@@ -21,7 +21,7 @@ function ShareButton({ t }) {
   };
 
   return (
-    <div className="brutal-border brutal-shadow bg-cream p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div className="brutal-border brutal-shadow bg-white rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p className="text-base font-bold text-center sm:text-left">{t.shareNote}</p>
       <button
         onClick={handleShare}
@@ -45,14 +45,14 @@ export default function Contact() {
   const whatsappMsg = encodeURIComponent('Hello! I would like to order milk from Patthireddy Dairy Farm.');
 
   return (
-    <section className="bg-neo brutal-border border-b-0 px-4 py-16">
+    <section className="brutal-border border-b-0 px-4 py-16" style={{ background: 'linear-gradient(180deg, #BBDEFB 0%, #E3F2FD 100%)' }}>
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="mb-12 text-center">
-          <span className="inline-block bg-cream brutal-border brutal-shadow-sm px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4">
+          <span className="inline-block bg-white brutal-border brutal-shadow-sm rounded-full px-4 py-1 text-xs font-semibold uppercase tracking-widest mb-4 text-neo-dark">
             {c.badge}
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-black whitespace-pre-line">
+          <h2 className="text-3xl md:text-5xl font-black text-black whitespace-pre-line">
             {c.heading}
           </h2>
           <p className="text-lg font-semibold mt-4 text-black/80">{c.subheading}</p>
@@ -60,7 +60,7 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           {/* Contact details card */}
-          <div className="brutal-border brutal-shadow-lg bg-cream p-8">
+          <div className="brutal-border brutal-shadow-lg bg-white rounded-2xl p-5 md:p-8">
             <h3 className="text-2xl font-black mb-6 flex items-center gap-2">
               <span>📍</span> {c.detailsTitle}
             </h3>
@@ -99,7 +99,7 @@ export default function Contact() {
           </div>
 
           {/* Order action card */}
-          <div className="brutal-border brutal-shadow-lg bg-black text-cream p-8 flex flex-col justify-between">
+          <div className="brutal-border brutal-shadow-lg bg-[#1A1A1A] text-cream rounded-2xl p-5 md:p-8 flex flex-col justify-between">
             <div>
               <h3 className="text-2xl font-black mb-3">{c.orderTitle}</h3>
               <p className="text-base font-medium text-cream/80 mb-8 leading-relaxed">{c.orderBody}</p>

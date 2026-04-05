@@ -8,18 +8,18 @@ export default {
     extend: {
       colors: {
         cream: {
-          DEFAULT: '#FFFBEB',
-          dark: '#FEF3C7',
+          DEFAULT: '#FAFAF7',
+          dark: '#EDE8DC',
         },
         neo: {
-          DEFAULT: '#60A5FA',
-          dark: '#2563EB',
+          DEFAULT: '#BFDBFE',
+          dark: '#1d4ed8',
         },
       },
       boxShadow: {
-        brutal: '4px 4px 0px 0px #000000',
-        'brutal-lg': '6px 6px 0px 0px #000000',
-        'brutal-sm': '2px 2px 0px 0px #000000',
+        brutal: '0 2px 10px rgba(0,0,0,0.08)',
+        'brutal-lg': '0 4px 20px rgba(0,0,0,0.10)',
+        'brutal-sm': '0 1px 4px rgba(0,0,0,0.06)',
       },
     },
   },

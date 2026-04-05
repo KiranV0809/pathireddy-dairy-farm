@@ -26,8 +26,8 @@ export default function StickyCTA({ heroRef }) {
     // md:hidden — only show on mobile/tablet, hide on desktop
     <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 animate-slide-up">
       <div
-        className="flex items-center gap-3 bg-black px-4 py-3"
-        style={{ borderTop: '3px solid #000', boxShadow: '0 -4px 0 0 #000' }}
+        className="flex items-center gap-3 bg-[#1A1A1A] px-4 py-3"
+        style={{ borderTop: '1px solid rgba(255,255,255,0.1)', boxShadow: '0 -4px 20px rgba(0,0,0,0.15)' }}
       >
         <a
           href={`https://wa.me/91${phone}?text=${whatsappMsg}`}
@@ -40,7 +40,7 @@ export default function StickyCTA({ heroRef }) {
         </a>
         <a
           href={`tel:+91${phone}`}
-          className="brutal-btn bg-cream text-black px-4 py-3 text-sm flex-1 inline-flex items-center justify-center gap-2 whitespace-nowrap"
+          className="brutal-btn bg-white text-[#1A1A1A] px-4 py-3 text-sm flex-1 inline-flex items-center justify-center gap-2 whitespace-nowrap"
         >
           <span>📞</span>
           <span className="font-black">+91 {phone}</span>
