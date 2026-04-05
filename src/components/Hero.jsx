@@ -22,6 +22,56 @@ const SHED = {
   ground:   'rgba(90, 58, 22, 0.28)',     // earth-brown ground haze
 };
 
+function SunElement() {
+  const rays = Array.from({ length: 12 }, (_, i) => {
+    const angle = (i * 30 * Math.PI) / 180;
+    return {
+      x1: 50 + 29 * Math.cos(angle),
+      y1: 50 + 29 * Math.sin(angle),
+      x2: 50 + 46 * Math.cos(angle),
+      y2: 50 + 46 * Math.sin(angle),
+    };
+  });
+
+  return (
+    <div
+      className="sun-rise absolute pointer-events-none"
+      style={{ top: '14px', left: '14px', zIndex: 25 }}
+    >
+      <div className="sun-float">
+        <svg
+          viewBox="0 0 100 100"
+          className="w-14 h-14 sm:w-18 sm:h-18 md:w-24 md:h-24"
+          style={{ width: 'clamp(62px, 7vw, 100px)', height: 'clamp(62px, 7vw, 100px)', display: 'block' }}
+          aria-hidden="true"
+        >
+          {/* Outer halo — pulses */}
+          <circle cx="50" cy="50" r="47" fill="rgba(255,230,50,0.12)" className="sun-glow-anim" />
+          {/* Mid glow */}
+          <circle cx="50" cy="50" r="38" fill="rgba(255,215,30,0.18)" />
+          {/* Spinning rays */}
+          <g className="sun-rays-anim">
+            {rays.map((r, i) => (
+              <line
+                key={i}
+                x1={r.x1} y1={r.y1} x2={r.x2} y2={r.y2}
+                stroke="rgba(255,200,0,0.70)"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+              />
+            ))}
+          </g>
+          {/* Sun body */}
+          <circle cx="50" cy="50" r="23" fill="#FFCA28" />
+          <circle cx="50" cy="50" r="18" fill="#FFE082" />
+          {/* Inner bright specular */}
+          <circle cx="43" cy="43" r="5" fill="rgba(255,255,255,0.38)" />
+        </svg>
+      </div>
+    </div>
+  );
+}
+
 function FarmSilhouette() {
   const pillars = [370, 490, 610, 700, 820, 940, 1030];
 
@@ -156,6 +206,9 @@ export default function Hero({ heroRef }) {
           zIndex: 1,
         }}
       />
+
+      {/* Animated sun */}
+      <SunElement />
 
       {/* Farm shed silhouette */}
       <FarmSilhouette />
